@@ -6,8 +6,8 @@ V {}
 S {}
 E {}
 B 2 150 -1880 950 -1480 {flags=graph
-y1=0
-y2=9700
+y1=-0.73
+y2=9600
 ypos1=0
 ypos2=2
 divy=5
@@ -25,38 +25,12 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-color="12 4"
-node="\\"vout\\"
-\\"Dérivée de vout; vout deriv()\\""
+color=12
+node="\\"vout derivative; vout deriv()\\""
 sweep=vpos
-autoload=1}
-B 2 1310 -1880 2110 -1480 {flags=graph
-y1=-15
-y2=80
-ypos1=0
-ypos2=2
-
-subdivy=1
-unity=1
-x1=2
-x2=9
-divx=5
-subdivx=8
-xlabmag=1.0
-ylabmag=1.0
-
-
-dataset=-1
-unitx=1
-logx=1
-logy=0
 autoload=1
-sim_type=ac
-
-color=4
-node="\\"Gain(dB); vout db20()\\""
-divy=8}
-B 2 1310 -1410 2110 -1010 {flags=graph
+linewidth_mult=3.0}
+B 2 1310 -1880 2110 -1480 {flags=graph
 y1=-180
 y2=180
 ypos1=0
@@ -70,20 +44,25 @@ divx=5
 subdivx=8
 xlabmag=1.0
 ylabmag=1.0
-node="\\"Phase(°); ph(vout)\\""
-color=6
+
+
 dataset=-1
 unitx=1
 logx=1
 logy=0
 autoload=1
 sim_type=ac
-divy=10}
+
+color="7 12"
+node="\\"Gain(dB); vout db20()\\"
+\\"Phase(°); ph(vout)\\""
+divy=8
+linewidth_mult=3}
 T {Cascode Standard cells} -890 -1070 0 0 0.4 0.4 {}
 T {Cascode LVT cells} -490 -1070 0 0 0.4 0.4 {}
-T {Simulation Gain DC} 310 -1970 0 0 1 1 {}
+T {DC Gain Simulation} 350 -1970 0 0 1 1 {}
 T {Diagramme de Bode} 1450 -1980 0 0 1 1 {}
-N 180 -870 180 -790 {
+N 230 -870 230 -790 {
 lab=#net1}
 N 610 -840 610 -800 {
 lab=#net2}
@@ -127,7 +106,7 @@ N 820 -970 850 -970 {
 lab=#net1}
 N 820 -850 930 -850 {
 lab=#net4}
-N 180 -730 180 -650 {
+N 230 -730 230 -650 {
 lab=GND}
 N -880 -740 -880 -620 {
 lab=GND}
@@ -379,8 +358,6 @@ N 360 -900 400 -900 {
 lab=#net1}
 N 400 -970 400 -900 {
 lab=#net1}
-N 180 -970 580 -970 {
-lab=#net1}
 N 360 -460 360 -380 {
 lab=#net16}
 N 300 -490 300 -350 {
@@ -403,11 +380,11 @@ N 750 -400 750 -350 {
 lab=GND}
 N 720 -350 750 -350 {
 lab=GND}
-N 180 -890 180 -870 {
+N 230 -890 230 -870 {
 lab=#net1}
-N 180 -970 180 -950 {
+N 230 -970 230 -950 {
 lab=#net1}
-N 180 -950 180 -890 {
+N 230 -950 230 -890 {
 lab=#net1}
 N 460 -400 680 -400 {
 lab=#net16}
@@ -417,10 +394,6 @@ N 360 -870 360 -520 {
 lab=#net17}
 N 720 -540 720 -430 {
 lab=#net3}
-N 880 -680 880 -640 {
-lab=vpos}
-N 540 -680 540 -610 {
-lab=vneg}
 N 540 -770 540 -740 {
 lab=#net18}
 N 540 -770 570 -770 {
@@ -433,7 +406,7 @@ N 930 -850 1040 -850 {
 lab=#net4}
 N 850 -970 1080 -970 {
 lab=#net1}
-N 1080 -970 1080 -880 {
+N 1130 -970 1130 -880 {
 lab=#net1}
 N 620 -400 620 -300 {
 lab=#net16}
@@ -443,35 +416,81 @@ N 840 -400 840 -300 {
 lab=#net16}
 N 840 -400 1040 -400 {
 lab=#net16}
-N 1080 -370 1080 -270 {
+N 1130 -370 1130 -270 {
 lab=GND}
-N 1080 -820 1080 -430 {
-lab=vout}
-N 1080 -850 1110 -850 {
+N 1130 -820 1130 -430 {
+lab=#net20}
+N 1130 -850 1160 -850 {
 lab=#net1}
-N 1110 -900 1110 -850 {
+N 1160 -900 1160 -850 {
 lab=#net1}
-N 1080 -900 1110 -900 {
+N 1130 -900 1160 -900 {
 lab=#net1}
-N 1080 -400 1110 -400 {
+N 1130 -400 1160 -400 {
 lab=GND}
-N 1110 -400 1110 -350 {
+N 1160 -400 1160 -350 {
 lab=GND}
-N 1080 -350 1110 -350 {
+N 1130 -350 1160 -350 {
 lab=GND}
 N 650 -770 790 -770 {
 lab=GND}
 N 720 -770 720 -750 {
 lab=GND}
-N 880 -520 880 -480 {
+N 230 -970 580 -970 {
+lab=#net1}
+N 1390 -440 1390 -270 {
 lab=GND}
-N 540 -610 540 -550 {
-lab=vneg}
-N 880 -640 880 -580 {
-lab=vpos}
+N 1130 -470 1350 -470 {
+lab=#net20}
+N 1390 -750 1390 -500 {
+lab=VOUT}
+N 1050 -780 1350 -780 {
+lab=#net4}
+N 1050 -850 1050 -780 {
+lab=#net4}
+N 1130 -970 1390 -970 {
+lab=#net1}
+N 1390 -970 1390 -810 {
+lab=#net1}
+N 1390 -780 1410 -780 {
+lab=#net1}
+N 1410 -830 1410 -780 {
+lab=#net1}
+N 1390 -830 1410 -830 {
+lab=#net1}
+N 1390 -470 1420 -470 {
+lab=VOUT}
+N 1420 -520 1420 -470 {
+lab=VOUT}
+N 1390 -520 1420 -520 {
+lab=VOUT}
 N 540 -520 540 -480 {
 lab=GND}
-C {vsource.sym} 180 -760 0 0 {name=VDD value=1.8 savecurrent=false}
+N 540 -640 540 -580 {
+lab=vneg}
+N 540 -740 540 -700 {
+lab=#net18}
+N 880 -520 880 -480 {
+lab=GND}
+N 880 -640 880 -580 {
+lab=vpos}
+N 880 -740 880 -700 {
+lab=#net19}
+N 1080 -970 1130 -970 {
+lab=#net1}
+N 1040 -850 1090 -850 {
+lab=#net4}
+N 1040 -400 1090 -400 {
+lab=#net16}
+N 1000 -850 1000 -820 {
+lab=#net4}
+N 1000 -760 1000 -740 {
+lab=#net21}
+N 1000 -740 1020 -740 {
+lab=#net21}
+N 1080 -740 1130 -740 {
+lab=#net20}
+C {vsource.sym} 230 -760 0 0 {name=VDD value=1.8 savecurrent=false}
 C {devices/code.sym} -1920 -1000 0 0 {name=TT_MODELS
 only_toplevel=true
 format="tcleval( @value )"
@@ -480,8 +499,7 @@ value="
 .lib $::SKYWATER_MODELS/sky130.lib.spice tt
 "
 spice_ignore=false}
-C {vsource.sym} 880 -710 0 0 {name=V+ value=0.9 savecurrent=false}
-C {gnd.sym} 180 -650 0 0 {name=l2 lab=GND}
+C {gnd.sym} 230 -650 0 0 {name=l2 lab=GND}
 C {gnd.sym} -780 -580 0 0 {name=l3 lab=GND}
 C {vsource.sym} -880 -770 0 0 {name=V4 value=2.85 savecurrent=false}
 C {sky130_fd_pr/nfet_01v8.sym} -680 -690 0 0 {name=M5
@@ -769,10 +787,7 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {vsource.sym} 540 -710 0 0 {name=V- value=0.9 savecurrent=false}
-C {lab_pin.sym} 880 -650 2 0 {name=p3 sig_type=std_logic lab=vpos}
-C {lab_pin.sym} 540 -650 2 0 {name=p4 sig_type=std_logic lab=vneg}
-C {sky130_fd_pr/nfet_01v8_lvt.sym} 1060 -400 0 0 {name=M20
+C {sky130_fd_pr/nfet_01v8_lvt.sym} 1110 -400 0 0 {name=M20
 W=20
 L=2
 nf=1
@@ -786,7 +801,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8_lvt
 spiceprefix=X
 }
-C {sky130_fd_pr/pfet_01v8_lvt.sym} 1060 -850 0 0 {name=M21
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 1110 -850 0 0 {name=M21
 W=118.5
 L=2
 nf=1
@@ -800,16 +815,58 @@ sa=0 sb=0 sd=0
 model=pfet_01v8_lvt
 spiceprefix=X
 }
-C {gnd.sym} 1080 -270 0 0 {name=l11 lab=GND}
+C {gnd.sym} 1130 -270 0 0 {name=l11 lab=GND}
 C {gnd.sym} 720 -750 0 0 {name=l21 lab=GND}
-C {lab_pin.sym} 1080 -640 0 0 {name=p5 sig_type=std_logic lab=vout}
-C {code_shown.sym} -590 -1880 0 0 {name=s1 only_toplevel=false 
+C {code_shown.sym} 1530 -860 0 0 {name=s1 only_toplevel=false 
 value="
-.ac dec 50 100 1G
+.ac dec 25 100 1G
 .save all
-"
+"}
+C {gnd.sym} 540 -480 0 0 {name=l6 lab=GND}
+C {vsource.sym} 540 -670 0 0 {name=Vcom value=0.9 savecurrent=false}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 1370 -780 0 0 {name=M22
+W=118.5
+L=2
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
 }
-C {vsource.sym} 540 -550 0 0 {name=vdecroissant1 value="-40u AC -1" savecurrent=false}
-C {vsource.sym} 880 -550 0 0 {name=vcroissant1 value="40u AC 1" savecurrent=false}
-C {gnd.sym} 880 -480 0 0 {name=l20 lab=GND}
-C {gnd.sym} 540 -480 0 0 {name=l5 lab=GND}
+C {sky130_fd_pr/pfet_01v8_lvt.sym} 1370 -470 0 0 {name=M23
+W=118.5
+L=2
+nf=1
+mult=1
+ad="'int((nf+1)/2) * W/nf * 0.29'" 
+pd="'2*int((nf+1)/2) * (W/nf + 0.29)'"
+as="'int((nf+2)/2) * W/nf * 0.29'" 
+ps="'2*int((nf+2)/2) * (W/nf + 0.29)'"
+nrd="'0.29 / W'" nrs="'0.29 / W'"
+sa=0 sb=0 sd=0
+model=pfet_01v8_lvt
+spiceprefix=X
+}
+C {gnd.sym} 1390 -270 0 0 {name=l5 lab=GND}
+C {vsource.sym} 880 -670 0 0 {name=Vcom1 value=0.9 savecurrent=false}
+C {vsource.sym} 880 -550 0 0 {name=vcroissant value="26.5u AC 1" savecurrent=false}
+C {vsource.sym} 540 -550 0 0 {name=vdecroissant value="-26.5u AC -1" savecurrent=false}
+C {gnd.sym} 880 -480 0 0 {name=l19 lab=GND}
+C {lab_pin.sym} 1390 -630 0 0 {name=p1 sig_type=std_logic lab=VOUT}
+C {lab_pin.sym} 880 -610 0 0 {name=p2 sig_type=std_logic lab=vpos}
+C {lab_pin.sym} 540 -610 0 0 {name=p3 sig_type=std_logic lab=vneg}
+C {capa.sym} 1050 -740 1 0 {name=C1
+m=1
+value=2p
+footprint=1206
+device="ceramic capacitor"}
+C {res.sym} 1000 -790 0 0 {name=R1
+value=2k
+footprint=1206
+device=resistor
+m=1}
